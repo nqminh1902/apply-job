@@ -1,7 +1,4 @@
 import type DxDateBox from 'devextreme-vue/date-box';
-import i18n from '@/locales/i18n';
-
-const t = i18n.t;
 
 export const defaultBaseDateBoxConfig: DxDateBox = {
     readOnly: false,
@@ -11,8 +8,8 @@ export const defaultBaseDateBoxConfig: DxDateBox = {
     showAnalogClock: true,
     showClearButton: false,
     adaptivityEnabled: true,
-    applyButtonText: t('base.button.ok'),
-    cancelButtonText: t('base.button.cancel'),
+    applyButtonText: "Chọn",
+    cancelButtonText: "Hủy",
     focusStateEnabled: true,
     displayFormat: "dd/MM/yyyy",
     useMaskBehavior: true,

@@ -1,4 +1,4 @@
-import type { RecruitmentDetailModel, RecruitmentRoundModel } from '@/models';
+import type { RecruitmentDetailModel } from '../../model/RecruitmentDetailModel';
 import BaseApi from '../base/base-api';
 import type { AxiosResponse } from 'axios';
 import type { ServiceResponse } from '@/DTOs';
@@ -10,10 +10,6 @@ export default class RecruitmentDetailApi extends BaseApi<RecruitmentDetailModel
 
     getTotalCandidateByRound(recruitmentID: number = 0, status: number = 1, period?: number): Promise<AxiosResponse<ServiceResponse>> {
         return this.baseApi.get(this.controller + `/getTotalByRound?recruitmentID=${recruitmentID}&status=${status}&period=${period}`);
-    }
-
-    changeRoundCandidate(recruitmentRound: RecruitmentRoundModel, ids: number[]): Promise<AxiosResponse<ServiceResponse>> {
-        return this.baseApi.post(this.controller + `/changeRound`, { recruitmentRound, ids });
     }
 
     changeEliminateCandidate(ids: number[], eliminateID: number, recruitmentID: number, isSendMail: boolean = false): Promise<AxiosResponse<ServiceResponse>> {

@@ -1,7 +1,4 @@
 import type DxSelectBox from 'devextreme-vue/select-box';
-import i18n from '@/locales/i18n';
-
-const t = i18n.t;
 
 export const defaultBaseSelectBoxConfig: DxSelectBox = {
     width: 220,
@@ -13,5 +10,5 @@ export const defaultBaseSelectBoxConfig: DxSelectBox = {
     focusStateEnabled: true,
     hoverStateEnabled: true,
     searchMode: 'contains',
-    placeholder: t('base.general.selectValue'),
+    placeholder: "Chọn giá trị",
 };

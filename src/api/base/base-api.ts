@@ -1,5 +1,5 @@
 import type { ServiceResponse } from '@/DTOs';
-import type { PagingRequest } from '@/models';
+import type { PagingRequest } from '../../model/PagingRequest';
 import type { AxiosResponse } from 'axios';
 import BaseApiConfig from './base-api-config';
 

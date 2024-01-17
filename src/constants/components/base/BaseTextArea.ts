@@ -1,7 +1,4 @@
 import type DxTextArea from 'devextreme-vue/text-area';
-import i18n from '@/locales/i18n';
-
-const t = i18n.t;
 
 export const defaultBaseTextAreaConfig: DxTextArea = {
     disabled: false,

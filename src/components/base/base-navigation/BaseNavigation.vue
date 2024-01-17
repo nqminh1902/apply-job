@@ -46,9 +46,9 @@
 <script setup lang="ts">
 import type { DxSelectBox } from "devextreme-vue";
 import { BaseSelectBox } from "..";
-import type { BaseNavigationType } from "../../../types";
 import { Icon } from "@iconify/vue";
 import { computed, ref } from "vue";
+import type BaseNavigationType from "../../../types/BaseNavigationType";
 
 // #region common
 

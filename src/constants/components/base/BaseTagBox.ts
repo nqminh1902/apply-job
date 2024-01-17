@@ -1,8 +1,4 @@
-
-import i18n from '@/locales/i18n';
 import DxTagBox from 'devextreme-vue/tag-box';
-
-const t = i18n.t;
 
 export const defaultBaseTagBoxConfig: DxTagBox = {
     width: 220,
@@ -13,7 +9,7 @@ export const defaultBaseTagBoxConfig: DxTagBox = {
     focusStateEnabled: true,
     hoverStateEnabled: true,
     searchMode: "contains",
-    placeholder: t('base.general.selectValue'),
+    placeholder: "Chọn giá trị",
     dropDownButtonTemplate: 'iconTemplate',
     elementAttr: {
         class: 'base-tag-box',

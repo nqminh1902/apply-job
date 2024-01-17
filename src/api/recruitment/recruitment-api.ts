@@ -1,4 +1,4 @@
-import type { RecruitmentModel } from '@/models';
+import type { RecruitmentModel } from '../../model/Recruitment';
 import BaseApi from '../base/base-api';
 import type { AxiosResponse } from 'axios';
 import type { ServiceResponse } from '@/DTOs';
