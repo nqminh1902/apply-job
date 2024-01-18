@@ -44,22 +44,4 @@ defineExpose({
 });
 </script>
 
-<style lang="scss">
-.base-radio-group {
-    .dx-radiobutton {
-        &.dx-state-hover,
-        &.dx-state-focused {
-            .dx-radiobutton-icon::before {
-                border-color: #2563eb;
-            }
-        }
-    }
-    .dx-radiobutton-icon-checked .dx-radiobutton-icon-dot {
-        background: #2563eb;
-        margin-top: -17px;
-        margin-left: 6px;
-        width: 11px;
-        height: 11px;
-    }
-}
-</style>
+<style lang="scss"></style>

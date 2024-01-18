@@ -34,15 +34,15 @@ const baseCheckBoxConfig: DxCheckBox = mergeObjects(
 // #endregion
 </script>
 
-<style lang="scss">
+<style lang="css">
 .base-check-box {
-    &.dx-checkbox.dx-state-hover .dx-checkbox-icon,
-    &.dx-checkbox.dx-state-focused .dx-checkbox-icon {
-        border: 1px solid #2563eb;
-    }
-    &.dx-checkbox-checked .dx-checkbox-icon {
-        color: #2563eb;
-    }
+}
+.base-check-box.dx-checkbox.dx-state-hover .dx-checkbox-icon,
+.base-check-box.dx-checkbox.dx-state-focused .dx-checkbox-icon {
+    border: 1px solid #2563eb;
+}
+.base-check-box.dx-checkbox-checked .dx-checkbox-icon {
+    color: #2563eb;
 }
 .dx-checkbox-indeterminate .dx-checkbox-icon::before {
     background-color: #2563eb;

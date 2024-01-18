@@ -34,8 +34,8 @@
 </template>
 
 <script setup lang="ts">
-import { Icon } from '@iconify/vue';
-import { ref, watch } from 'vue';
+import { Icon } from "@iconify/vue";
+import { ref, watch } from "vue";
 
 // #region common
 const props = defineProps<{
@@ -48,11 +48,11 @@ const props = defineProps<{
 }>();
 
 const emit = defineEmits<{
-    (e: 'update:modelValue', value: string): void;
-    (e: 'changeValue', value: string): void;
+    (e: "update:modelValue", value: string): void;
+    (e: "changeValue", value: string): void;
 }>();
 
-const internalValue = ref<string>(props.modelValue ?? '');
+const internalValue = ref<string>(props.modelValue ?? "");
 // #endregion
 
 // #region handle events
@@ -61,11 +61,11 @@ const isActiveItem = (item: string) =>
 
 const handleSetValue = (value: any) => {
     if (props.modelValue || (props.valueExpr && props.displayValue)) {
-        if (typeof value === 'object') internalValue.value = value.title;
+        if (typeof value === "object") internalValue.value = value.title;
         else internalValue.value = value;
-        emit('update:modelValue', value);
+        emit("update:modelValue", value);
     }
-    emit('changeValue', value);
+    emit("changeValue", value);
 };
 
 watch(
@@ -77,75 +77,65 @@ watch(
 // #endregion
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .base-dropdown {
     width: 100%;
     height: 100%;
     min-width: 130px;
     position: relative;
-    .current-value {
-        transition: 0.3s;
-        justify-content: end;
+}
+.current-value {
+    transition: 0.3s;
+    justify-content: end;
+}
+.base-dropdown:hover {
+}
+.dropdown-list {
+    display: block;
+    transition: 0.4s;
+}
+.current-value {
+    color: var(--app-color-secondary);
+    transition: 0.3s;
+}
+.base-dropdown::after {
+    content: "";
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: transparent;
+}
+.dropdown-list {
+    display: none;
+    position: absolute;
+    padding: 0 12px;
+    top: calc(100% + 6px);
+    right: 0;
+    width: max-content;
+    min-width: 120px;
+    color: var(--app-color-black);
+    background-color: var(--app-color-white);
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.4s ease-out;
+    z-index: 101;
+}
+.dropdown-item {
+    display: flex;
+    align-items: center;
+}
+.dropdown-item:not(:last-child) {
+    border-bottom: 1px solid var(--app-color-border-lighter);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        margin-top: 10px;
     }
-    &:hover {
-        .dropdown-list {
-            display: block;
-            transition: 0.4s;
-        }
-        .current-value {
-            color: var(--app-color-secondary);
-            transition: 0.3s;
-        }
-    }
-    &::after {
-        content: '';
-        width: 100%;
-        height: 6px;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: transparent;
-    }
-    .dropdown-list {
-        display: none;
-        position: absolute;
-        padding: 0 12px;
-        top: calc(100% + 6px);
-        right: 0;
-        width: max-content;
-        min-width: 120px;
-        color: var(--app-color-black);
-        background-color: var(--app-color-white);
-        box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
-        animation: fadeIn 0.4s ease-out;
-        z-index: 101;
-        .dropdown-item {
-            display: flex;
-            align-items: center;
-            &:not(:last-child) {
-                border-bottom: 1px solid var(--app-color-border-lighter);
-            }
-            &:hover {
-                cursor: pointer;
-                color: var(--app-color-secondary);
-            }
-            span {
-                margin-left: 6px;
-                &.active {
-                    color: var(--app-color-secondary);
-                }
-            }
-        }
-    }
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            margin-top: 10px;
-        }
-        to {
-            opacity: 1;
-            margin-top: 0;
-        }
+    to {
+        opacity: 1;
+        margin-top: 0;
     }
 }
 </style>

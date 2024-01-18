@@ -55,26 +55,28 @@ defineExpose({
 });
 </script>
 
-<style lang="scss">
+<style lang="css">
 .base-select-box {
-    &.dx-texteditor.dx-state-hover,
-    &.dx-texteditor.dx-state-focused,
-    &.dx-texteditor.dx-state-active {
-        border-color: #2680eb;
-    }
-    &.dx-dropdowneditor.dx-state-active .dx-dropdowneditor-icon,
-    &.dx-dropdowneditor.dx-state-focused .dx-dropdowneditor-icon,
-    &.dx-dropdowneditor.dx-state-hover:not(.dx-custom-button-hovered)
-        .dx-dropdowneditor-icon,
-    &.dx-dropdowneditor-button.dx-state-active .dx-dropdowneditor-icon,
-    &.dx-dropdowneditor.dx-dropdowneditor-active .dx-dropdowneditor-icon {
-        background-color: transparent;
-    }
-    .dx-dropdowneditor-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+}
+.base-select-box.dx-texteditor.dx-state-hover,
+.base-select-box.dx-texteditor.dx-state-focused,
+.base-select-box.dx-texteditor.dx-state-active {
+    border-color: #2680eb;
+}
+.base-select-box.dx-dropdowneditor.dx-state-active .dx-dropdowneditor-icon,
+.base-select-box.dx-dropdowneditor.dx-state-focused .dx-dropdowneditor-icon,
+.base-select-box.dx-dropdowneditor.dx-state-hover:not(.dx-custom-button-hovered)
+    .dx-dropdowneditor-icon,
+.base-select-box.dx-dropdowneditor-button.dx-state-active
+    .dx-dropdowneditor-icon,
+.base-select-box.dx-dropdowneditor.dx-dropdowneditor-active
+    .dx-dropdowneditor-icon {
+    background-color: transparent;
+}
+.dx-dropdowneditor-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .dx-dropdownlist-popup-wrapper .dx-empty-message,
 .dx-dropdownlist-popup-wrapper .dx-list-item {
@@ -87,19 +89,23 @@ defineExpose({
     padding: 8px 9px;
 }
 .dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item {
-    &.dx-state-active,
-    &.dx-state-focused,
-    &.dx-list-item-selected {
-        color: var(--app-color-white);
-        background-color: #2680eb;
-    }
+}
+.dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-state-active,
+.dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-state-focused,
+.dx-list:not(.dx-list-select-decorator-enabled)
+    .dx-list-item.dx-list-item-selected {
+    color: var(--app-color-white);
+    background-color: #2680eb;
 }
 .dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item {
-    &.dx-list-item-selected.dx-state-hover,
-    &.dx-list-item-selected.dx-state-focused,
-    &.dx-list-item-selected.dx-state-active {
-        color: var(--app-color-white) !important;
-        background-color: #2680eb !important;
-    }
+}
+.dx-list:not(.dx-list-select-decorator-enabled)
+    .dx-list-item.dx-list-item-selected.dx-state-hover,
+.dx-list:not(.dx-list-select-decorator-enabled)
+    .dx-list-item.dx-list-item-selected.dx-state-focused,
+.dx-list:not(.dx-list-select-decorator-enabled)
+    .dx-list-item.dx-list-item-selected.dx-state-active {
+    color: var(--app-color-white) !important;
+    background-color: #2680eb !important;
 }
 </style>

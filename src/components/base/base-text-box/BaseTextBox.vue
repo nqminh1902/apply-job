@@ -68,39 +68,4 @@ defineExpose({
 });
 </script>
 
-<style lang="scss">
-.base-text-box {
-    .dx-texteditor.dx-state-hover,
-    .dx-textbox.dx-state-hover {
-        border-color: #2680eb !important;
-        .dx-texteditor-label {
-            color: #2680eb !important;
-        }
-    }
-    .dx-texteditor.dx-state-focused,
-    .dx-textbox.dx-state-focused {
-        border-color: #2680eb !important;
-        .dx-texteditor-label {
-            color: #2680eb !important;
-        }
-    }
-    .textbox-border-radius {
-        border-radius: 4px 0px 0px 4px !important;
-    }
-    .button-border-radius {
-        border-radius: 0px 4px 4px 0px;
-    }
-    .dx-texteditor-container {
-        .dx-button-mode-contained {
-            border-color: transparent;
-        }
-    }
-    .dx-button-mode-contained {
-        &.dx-state-hover,
-        &.dx-state-active,
-        &.dx-state-focused {
-            background-color: var(--app-color-white);
-        }
-    }
-}
-</style>
+<style lang="css"></style>

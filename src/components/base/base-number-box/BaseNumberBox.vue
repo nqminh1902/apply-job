@@ -51,11 +51,4 @@ defineExpose({
 });
 </script>
 
-<style lang="scss">
-.dx-numberbox.dx-state-hover {
-    border-color: #2680eb !important;
-}
-.dx-numberbox.dx-state-focused {
-    border-color: #2680eb !important;
-}
-</style>
+<style lang="scss"></style>

@@ -33,13 +33,13 @@ const internalValue = computed({
 // #endregion
 </script>
 
-<style lang="scss">
+<style lang="css">
 .base-date-box {
-    &.dx-texteditor.dx-state-hover,
-    &.dx-texteditor.dx-state-active,
-    &.dx-texteditor.dx-state-focused {
-        border-color: #2680eb;
-    }
+}
+.base-date-box.dx-texteditor.dx-state-hover,
+.base-date-box.dx-texteditor.dx-state-active,
+.base-date-box.dx-texteditor.dx-state-focused {
+    border-color: #2680eb;
 }
 .dx-calendar-navigator .dx-calendar-caption-button.dx-button .dx-button-content,
 .dx-calendar-navigator-next-view.dx-button .dx-icon,
