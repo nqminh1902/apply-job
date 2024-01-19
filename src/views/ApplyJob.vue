@@ -8,7 +8,7 @@
                 <div class="description">
                     Từ {{ formatCurrency(recruitment?.MinSalary) }} đến
                     {{ formatCurrency(recruitment?.MaxSalary) }} *
-                    {{ recruitment?.WorkType }}
+                    {{ handleWorkType(recruitment?.WorkType) }}
                 </div>
                 <div class="button-apply">
                     <base-button :config="buttonConfig"></base-button>
@@ -188,6 +188,7 @@
 import { DxButton, DxPopup } from "devextreme-vue";
 import { ref } from "vue";
 import { BaseButton, BasePopup } from "../components/base";
+import { workTypes } from "../mocks";
 import { ButtonStylingMode, ButtonType } from "../enums";
 import { Icon } from "@iconify/vue";
 import { RecruitmentModel } from "../model/Recruitment";
@@ -270,6 +271,14 @@ function checkTimeInRange(start: Date, end: Date) {
     }
 
     return false;
+}
+
+function handleWorkType(workType: number) {
+    const type = workTypes.find((work) => work.TypeOfWorkID == workType);
+    if (type) {
+        return type.TypeOfWorkName;
+    }
+    return workTypes[0].TypeOfWorkName;
 }
 
 function handleShowSuccess() {
