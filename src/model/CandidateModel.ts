@@ -11,7 +11,7 @@ export class CandidateModel extends BaseModel {
     Active: number = 1
     Mobile?: any
     ApplyDate: Date = new Date()
-    Birthday?: Date
+    Birthday?: Date = new Date()
     Email: string = ""
     Address: string = ""
     CandidateStatusID?: number
@@ -44,8 +44,8 @@ export class WorkExperientModel extends BaseModel {
     WorkExperientID: number = 0
     CandidateID: number = 0
     CompanyName: string = ""
-    FromDate?: Date
-    ToDate?: Date
+    FromDate?: Date = new Date()
+    ToDate?: Date = new Date()
     JobDescription?: string
     JobPosition?: string
 }

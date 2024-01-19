@@ -240,9 +240,10 @@ async function getRecruitmentByID() {
             res.data.Data.RecruitmentRound.RecruitmentRoundID;
         recruitmentDetail.RecruitmentRoundName =
             res.data.Data.RecruitmentRound.RecruitmentRoundName;
-        recruitmentDetail.RecruitmentPeriodID = getPeriod(
-            res.data.Data.RecruitmentPeriod
-        );
+        recruitmentDetail.RecruitmentPeriodID = res.data.Data.RecruitmentPeriod
+            .length
+            ? getPeriod(res.data.Data.RecruitmentPeriod)
+            : undefined;
         recruitmentDetail.Status = 1;
     } else {
         router.push({ name: "not-found" });
