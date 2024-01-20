@@ -85,6 +85,7 @@ import { Icon } from "@iconify/vue";
 import { DxButton, DxTextBox } from "devextreme-vue";
 import { formatCurrency, formatDate } from "../utils";
 import { useRouter } from "vue-router";
+import { json } from "stream/consumers";
 
 const recruitmentApi = new RecruitmentApi();
 const filterPaging = new PagingRequest();
@@ -112,6 +113,7 @@ async function getRecruitment() {
     filterPaging.Collums = ["Title", "JobPositionName"];
     filterPaging.PageIndex = 1;
     filterPaging.PageSize = 1000;
+    filterPaging.CustomFilter = btoa(JSON.stringify([["Status", "=", "1"]]));
     filterPaging.SearchValue = searchValue.value;
     const res = await recruitmentApi.getPagingPublic(filterPaging);
     if (res) {
