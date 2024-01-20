@@ -85,7 +85,6 @@ import { Icon } from "@iconify/vue";
 import { DxButton, DxTextBox } from "devextreme-vue";
 import { formatCurrency, formatDate } from "../utils";
 import { useRouter } from "vue-router";
-import { json } from "stream/consumers";
 
 const recruitmentApi = new RecruitmentApi();
 const filterPaging = new PagingRequest();
