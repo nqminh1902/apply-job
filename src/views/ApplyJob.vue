@@ -98,7 +98,7 @@
                         <div class="right-block">
                             <div class="right-block-title">Số lượng</div>
                             <div class="right-block-content">
-                                {{ recruitment?.Quantity }}
+                                {{ recruitment?.ActualQuantity }}
                             </div>
                         </div>
                     </div>
